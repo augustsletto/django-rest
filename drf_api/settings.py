@@ -39,7 +39,7 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
-
+}
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -49,7 +49,7 @@ SECRET_KEY = 'django-insecure-6wb#ip0z2!i%o*pqxqwu4wmwrn)l_y!dnzo_k=#f*@%ttv2e!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-augustsletto-djangorest-g4aditusjc6.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['8000-augustsletto-djangorest-g4aditusjc6.ws-eu110.gitpod.io', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-augustsletto-djangorest-g4aditusjc6.ws-eu110.gitpod.io',
@@ -71,16 +71,17 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'dj_rest_auth',
-    'django_contrib.sites',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+
+    'profiles',
     'posts',
     'comments',
     'likes',
     'followers',
-    'profiles',
 ]
 SITE_ID = 1
 MIDDLEWARE = [
